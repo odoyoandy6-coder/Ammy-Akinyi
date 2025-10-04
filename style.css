@@ -413,3 +413,157 @@ footer .manufactured{
     width: 100%;
   }
 }
+/* Mobile styles for phone screens (max width 600px) */
+@media only screen and (max-width: 600px) {
+  
+  /* Make header elements stack vertically */
+  #header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  /* Navbar: stack links vertically and center */
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    margin: 10px 0 0 0;
+    list-style: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  #navbar li {
+    width: 100%;
+  }
+
+  #navbar li a {
+    display: block;
+    padding: 10px 0;
+    font-size: 18px;
+  }
+
+  /* Hero section: center text and reduce font sizes */
+  #hero {
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  #hero h1 {
+    font-size: 2rem;
+  }
+
+  #hero h2 {
+    font-size: 1.2rem;
+  }
+
+  #hero h3 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  /* Hero button: full width and bigger tap area */
+  .cta-button {
+    display: inline-block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 1.2rem;
+    border-radius: 8px;
+  }
+
+  /* Features section: stack vertically */
+  #feature {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 10px;
+  }
+
+  .fe-box {
+    text-align: center;
+  }
+
+  .fe-box img {
+    max-width: 80px;
+    margin-bottom: 10px;
+  }
+
+  /* Products container: single column */
+  .pro-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .pro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pro img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .des span {
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  .des h5 {
+    font-size: 0.9rem;
+    margin: 5px 0;
+  }
+
+  .price h4 {
+    font-size: 1rem;
+    color: #b8860b; /* example gold color */
+  }
+
+  .cart a {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #b8860b;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  /* Banner section: smaller font */
+  #banner h4 {
+    font-size: 1rem;
+  }
+
+  #banner h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Footer: stack columns vertically */
+  footer.section-p1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  footer .col,
+  footer .manufactured,
+  footer .copyright {
+    width: 100%;
+  }
+
+  footer .logo {
+    max-width: 120px;
+    margin: 0 auto 10px auto;
+  }
+}
