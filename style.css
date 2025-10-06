@@ -338,51 +338,8 @@ footer .manufactured{
 }
 
 
-
-@media (max-width:799px) {
-  .section-p1 {
-    padding: 40px 40px;
-}
-  
-  #hero {
-    height: 40vh;
-    width: 100%;
-    padding: 10px;
-  }
-  #navbar li{
-    margin-bottom: 25px;
-  }
-  #product1 .pro-container {
-    justify-content: center;
-}
-#product1 .pro{
-  text-align: center;
-  margin: 15px;
-}
-#banner {
-  height: 20vh;
-}
-#hero {
-    
-  height: 50vh;
-  width: 100%;
- 
-  background-position: top 25% right 0;
-  padding: 0 20px;
-}
-.section-p1{
-  padding: 20px;
-}
-#feature .fe-box{
-  width: 150px;
-  margin: 0 0 15px 0;
-}
-#product1.pro{
-  width: 100%;
-}
-}
 /* Mobile styles for phone screens (max width 600px) */
-@media only screen and (max-width: 600px) {
+@media  and (max-width: 600px) {
   
   /* Make header elements stack vertically */
   #header {
@@ -536,3 +493,4 @@ footer .manufactured{
   }
 
 }
+
