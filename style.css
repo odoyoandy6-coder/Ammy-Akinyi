@@ -361,6 +361,31 @@ footer .manufactured{
     text-align: center;
   }
 
+    }
+}
+/* Specific for older iPhones (e.g., max-width: 320px like iPhone 5/SE) */
+@media screen and (max-width: 320px) {
+  #header img {
+    width: 60px;
+    height: 60px;
+  }
+  #navbar li a {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+  #hero h1 {
+    font-size: 2rem;
+  }
+  #product1 .pro {
+    padding: 10px;
+  }
+  .about-content .read-more {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+
   #navbar li {
     width: 100%;
   }
@@ -493,4 +518,5 @@ footer .manufactured{
   }
 
 }
+
 
