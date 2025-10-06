@@ -339,7 +339,7 @@ footer .manufactured{
 
 
 /* Mobile styles for phone screens (max width 600px) */
-@media  and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   
   /* Make header elements stack vertically */
   #header {
@@ -364,7 +364,7 @@ footer .manufactured{
     }
 }
 /* Specific for older iPhones (e.g., max-width: 320px like iPhone 5/SE) */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 420px) {
   #header img {
     width: 60px;
     height: 60px;
@@ -518,5 +518,6 @@ footer .manufactured{
   }
 
 }
+
 
 
