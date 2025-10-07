@@ -165,12 +165,20 @@ padding-bottom: 15px;
   text-align: center;
   
 }
-#product1 .pro-container{
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  flex-wrap: wrap;
+#product1 .pro-container{                         /* Enable Grid */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  /* Auto-fit columns: At least 200px each, fill available space */
+  /* Alternative: grid-template-columns: 1fr 1fr 1fr 1fr; for exactly 4 fixed columns */
+  grid-auto-rows: auto;                   /* Rows height based on content */
+  gap: 20px;                              /* Space between grid items */
+  justify-items: center;                  /* Center items in their cells */
 }
+.product {
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
 #product1 .pro{
   width: 23%; 
   max-width: 250px;
@@ -336,164 +344,55 @@ footer .manufactured{
 .about-content .read-more{
   background-color: #0fa348;
 }
-
-
-/* Specific for older iPhones (e.g., max-width: 320px like iPhone 5/SE) */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 580px) {
+  /* Header adjustments (from your previous code, scaled for 600px) */
   #header img {
-    width: 60px;
-    height: 60px;
+    width: 70px;  /* Balanced size for mid-sized screens */
+    height: 70px;
   }
-  #navbar li a {
-    font-size: 14px;
-    padding: 10px 15px;
-  }
-  #hero h1 {
-    font-size: 2rem;
-  }
-  #product1 .pro {
-    padding: 20px;
-  }
-  .about-content .read-more {
-    font-size: 14px;
-    padding: 10px 20px;
-  }
-}
-
-
+  /* Navbar: Stacked for easier navigation */
   #navbar li {
     width: 100%;
   }
-
   #navbar li a {
     display: block;
     padding: 10px 0;
-    font-size: 18px;
+    font-size: 16px;  /* Readable on 600px */
   }
-
-  /* Hero section: center text and reduce font sizes */
+  /* Hero section: Centered with adjusted sizes */
   #hero {
-    padding: 20px 10px;
+    padding: 25px 15px;  /* More padding than smaller screens */
     text-align: center;
   }
-
   #hero h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;  /* Slightly larger than 2rem for better visibility */
   }
-
   #hero h2 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
-
   #hero h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-bottom: 15px;
   }
-
-  /* Hero button: full width and bigger tap area */
-  .cta-button {
+ .cta-button {
     display: inline-block;
     width: 100%;
     padding: 15px 0;
     font-size: 1.2rem;
     border-radius: 8px;
   }
-
-  /* Features section: stack vertically */
-  #feature {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px 10px;
-  }
-
-  .fe-box {
-    text-align: center;
-  }
-
-  .fe-box img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
-
-  /* Products container: single column */
-  .pro-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 10px;
-  }
-
-  .pro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .pro img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-
-  .des span {
-    font-weight: bold;
+  
+#product1 .pro-container{
+  justify-content: center;
+}
+#product1 .pro{
+  margin: 15px;
+}
+#banner h4 {
     font-size: 1.1rem;
   }
-
-  .des h5 {
-    font-size: 0.9rem;
-    margin: 5px 0;
-  }
-
-  .price h4 {
-    font-size: 1rem;
-    color: #b8860b; /* example gold color */
-  }
-
-  .cart a {
-    display: inline-block;
-    margin-top: 10px;
-    background-color: #b8860b;
-    color: white;
-    padding: 10px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  /* Banner section: smaller font */
-  #banner h4 {
-    font-size: 1rem;
-  }
-
   #banner h2 {
-    font-size: 1.5rem;
-  }
-
-  /* Footer: stack columns vertically */
-  footer.section-p1 {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px 10px;
-    text-align: center;
-  }
-
-  footer .col,
-  footer .manufactured,
-  footer .copyright {
-    width: 100%;
-  }
-
-  footer .logo {
-    max-width: 120px;
-    margin: 0 auto 10px auto;
-  }
-
-}
+    font-size: 1.7rem;
   }
   /* Footer: Vertical stack */
   footer.section-p1 {
@@ -518,6 +417,29 @@ footer .manufactured{
     padding: 12px 25px;                     /* Larger for consistency */
   }
 }
+.headinga {
+        padding: 30px 15px;
+    }
+    .headinga h1 {
+        font-size: 2rem;  /* Slightly smaller but still large */
+    }
+    .headinga p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+    /* Container: More padding for edges */
+    .containera {
+        padding: 15px;
+    }
+.about {
+        flex-direction: column;  /* Override: Stack image above content */
+        gap: 30px;               /* Maintain spacing */
+        padding: 30px 15px;      /* Reduced but still spacious */
+        text-align: center;      /* Center for mobile symmetry */
+    }
+    .about-image {
+        order: -1;               /* Image first (above content) on mobile */
+    }
     .about-image img {
         max-width: 300px;        /* Larger relative to screen but capped */
         width: 100%;
@@ -541,13 +463,3 @@ footer .manufactured{
         width: 100%;             /* Full-width on mobile for prominence */
         max-width: 250px;        /* Cap to avoid over-stretching */
     }
-}
-
-
-
-
-
-
-
-
-
