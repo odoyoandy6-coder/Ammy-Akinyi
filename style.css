@@ -518,6 +518,32 @@ footer .manufactured{
     padding: 12px 25px;                     /* Larger for consistency */
   }
 }
+    .about-image img {
+        max-width: 300px;        /* Larger relative to screen but capped */
+        width: 100%;
+        height: auto;
+    }
+    .about-content {
+        padding: 25px 15px;      /* Increased padding for bigger text area */
+    }
+    .about-content h2 {
+        font-size: 1.8rem;       /* Scaled down but readable */
+        margin-bottom: 15px;
+    }
+    .about-content p {
+        font-size: 1rem;         /* Larger body text for easy reading */
+        margin-bottom: 20px;
+        padding: 0 10px;         /* Side padding to avoid edges */
+    }
+    .read-more {
+        padding: 14px 40px;      /* Wider button for touch (min 44px target) */
+        font-size: 1rem;
+        width: 100%;             /* Full-width on mobile for prominence */
+        max-width: 250px;        /* Cap to avoid over-stretching */
+    }
+}
+
+
 
 
 
